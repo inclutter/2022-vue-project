@@ -9,4 +9,8 @@ module.exports = {
             ca: fs.readFileSync('src/assets/ssl/rootca_www.inclutter.com.crt')
         },
     },
+
+    transpileDependencies: [
+      'vuetify'
+    ]
 };
