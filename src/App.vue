@@ -88,10 +88,12 @@ export default {
       { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/'},
       { title: 'Grid System', icon: 'mdi-view-dashboard', to: '/grid-system'},
       { title: 'Grid List Page', icon: 'mdi-view-dashboard', to: '/grid-list-page'},
+      { title: 'Breakpoints', icon: 'mdi-view-dashboard', to: '/breakpoints'},
     ],
     sites: [
       { url: 'http://inclutter.com:8081', icon: 'mdi-view-dashboard', title: 'Jenkins'},
       { url: 'https://www.notion.so/inclutter', icon: 'mdi-view-dashboard', title: 'Notion'},
+      { url: 'https://github.com/inclutter', icon: 'mdi-view-dashboard', title: 'Github'},
     ],
     right: null,
   }),
