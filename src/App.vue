@@ -12,7 +12,17 @@
     <v-navigation-drawer
       v-model="drawer"
       app
+      dark
     >
+      <template
+        v-slot:img="props"
+      >
+        <v-img
+          :src="require('@/assets/sidebar2.jpg')"
+          :gradient="gradient"
+          v-bind="props"
+        />
+      </template>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
@@ -55,6 +65,8 @@
           :key="item.title"
           link
           :to="item.to"
+          active-class="primary"
+          class="py-1"
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -84,16 +96,22 @@ export default {
 
   data: () => ({
     drawer: false,
+    gradient: 'rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)',
     items: [
       { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/'},
-      { title: 'Grid System', icon: 'mdi-view-dashboard', to: '/grid-system'},
-      { title: 'Grid List Page', icon: 'mdi-view-dashboard', to: '/grid-list-page'},
-      { title: 'Breakpoints', icon: 'mdi-view-dashboard', to: '/breakpoints'},
+      { title: 'Grid System', icon: 'mdi-grid-large', to: '/grid-system'},
+      { title: 'Grid List Page', icon: 'mdi-grid-large', to: '/grid-list-page'},
+      { title: 'Breakpoints', icon: 'mdi-format-bold', to: '/breakpoints'},
+      { title: 'Typography', icon: 'mdi-format-text-variant-outline', to: '/typography'},
+      { title: 'Tables', icon: 'mdi-table-large-plus', to: '/tables'},
+      { title: 'Forms', icon: 'mdi-form-textbox', to: '/forms'},
+      { title: 'Buttons', icon: 'mdi-gesture-tap-button', to: '/buttons'},
+      { title: 'Icons', icon: 'mdi-robot-confused', to: '/icons'},
     ],
     sites: [
-      { url: 'http://inclutter.com:8081', icon: 'mdi-view-dashboard', title: 'Jenkins'},
+      { url: 'http://inclutter.com:8081', icon: 'mdi-face-man-outline', title: 'Jenkins'},
       { url: 'https://www.notion.so/inclutter', icon: 'mdi-view-dashboard', title: 'Notion'},
-      { url: 'https://github.com/inclutter', icon: 'mdi-view-dashboard', title: 'Github'},
+      { url: 'https://github.com/inclutter', icon: 'mdi-github', title: 'Github'},
     ],
     right: null,
   }),

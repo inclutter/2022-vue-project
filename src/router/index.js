@@ -4,6 +4,11 @@ import Dashboard from "../views/Dashboard";
 import GridSystem from "../views/GridSystem";
 import GridListPage from "../views/GridListPage";
 import Breakpoints from "../views/Breakpoints";
+import Typography from "../views/Typography";
+import Tables from "../views/Tables";
+import Forms from "../views/Forms";
+import Icons from "../views/Icons";
+import Buttons from "../views/Buttons";
 
 Vue.use(VueRouter)
 
@@ -27,6 +32,31 @@ const routes = [
     path: '/breakpoints',
     name: 'Breakpoints',
     component: Breakpoints
+  },
+  {
+    path: '/typography',
+    name: 'Typography',
+    component: Typography
+  },
+  {
+    path: '/tables',
+    name: 'Tables',
+    component: Tables
+  },
+  {
+    path: '/forms',
+    name: 'Forms',
+    component: Forms
+  },
+  {
+    path: '/icons',
+    name: 'Icons',
+    component: Icons
+  },
+  {
+    path: '/buttons',
+    name: 'Buttons',
+    component: Buttons
   }
 ]
 
