@@ -9,55 +9,94 @@ import Tables from "../views/Tables";
 import Forms from "../views/Forms";
 import Icons from "../views/Icons";
 import Buttons from "../views/Buttons";
+import AuthenticationLayout from "../layouts/authentication/AuthenticationLayout";
+import DefaultLayout from "../layouts/default/DefaultLayout";
+import PageLayout from "../layouts/page/PageLayout";
+import SignUp from "../views/authentication/SignUp";
+import SignIn from "../views/authentication/SignIn";
+import ProductList from "../views/page/ProductList";
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Dashboard',
-    component: Dashboard
+    component: DefaultLayout,
+    children: [
+      {
+        path: '/',
+        name: 'Dashboard',
+        component: Dashboard
+      },
+      {
+        path: 'grid-system',
+        name: 'GridSystem',
+        component: GridSystem
+      },
+      {
+        path: '/grid-list-page',
+        name: 'GridListPage',
+        component: GridListPage
+      },
+      {
+        path: '/breakpoints',
+        name: 'Breakpoints',
+        component: Breakpoints
+      },
+      {
+        path: '/typography',
+        name: 'Typography',
+        component: Typography
+      },
+      {
+        path: '/tables',
+        name: 'Tables',
+        component: Tables
+      },
+      {
+        path: '/forms',
+        name: 'Forms',
+        component: Forms
+      },
+      {
+        path: '/icons',
+        name: 'Icons',
+        component: Icons
+      },
+      {
+        path: '/buttons',
+        name: 'Buttons',
+        component: Buttons
+      }
+    ],
   },
   {
-    path: '/grid-system',
-    name: 'GridSystem',
-    component: GridSystem
+    path: '/authentication',
+    component: AuthenticationLayout,
+    children: [
+      {
+        path: 'sign-in',
+        name: 'SignIn',
+        component: SignIn
+      },
+      {
+        path: 'sign-up',
+        name: 'SignUp',
+        component: SignUp
+      },
+    ]
   },
   {
-    path: '/grid-list-page',
-    name: 'GridListPage',
-    component: GridListPage
+    path: '/page',
+    component: PageLayout,
+    children: [
+      {
+        path: 'product-list',
+        name: 'ProductList',
+        component: ProductList
+      },
+    ]
   },
-  {
-    path: '/breakpoints',
-    name: 'Breakpoints',
-    component: Breakpoints
-  },
-  {
-    path: '/typography',
-    name: 'Typography',
-    component: Typography
-  },
-  {
-    path: '/tables',
-    name: 'Tables',
-    component: Tables
-  },
-  {
-    path: '/forms',
-    name: 'Forms',
-    component: Forms
-  },
-  {
-    path: '/icons',
-    name: 'Icons',
-    component: Icons
-  },
-  {
-    path: '/buttons',
-    name: 'Buttons',
-    component: Buttons
-  }
 ]
 
 const router = new VueRouter({
