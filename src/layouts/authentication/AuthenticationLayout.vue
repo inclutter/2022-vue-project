@@ -5,11 +5,13 @@
 </template>
 
 <script>
-import AuthenticationView from "./AuthenticationView";
 export default {
   name: "AuthenticationLayout",
   components: {
-    AuthenticationView
+    AuthenticationView: () => import(
+      /* webpackChunkName: "authentication-view" */
+      './AuthenticationView'
+    )
   }
 }
 </script>

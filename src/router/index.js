@@ -1,20 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Dashboard from "../views/Dashboard";
-import GridSystem from "../views/GridSystem";
-import GridListPage from "../views/GridListPage";
-import Breakpoints from "../views/Breakpoints";
-import Typography from "../views/Typography";
-import Tables from "../views/Tables";
-import Forms from "../views/Forms";
-import Icons from "../views/Icons";
-import Buttons from "../views/Buttons";
 import AuthenticationLayout from "../layouts/authentication/AuthenticationLayout";
 import DefaultLayout from "../layouts/default/DefaultLayout";
 import PageLayout from "../layouts/page/PageLayout";
-import SignUp from "../views/authentication/SignUp";
-import SignIn from "../views/authentication/SignIn";
-import ProductList from "../views/page/ProductList";
 
 Vue.use(VueRouter)
 
@@ -24,49 +12,53 @@ const routes = [
     component: DefaultLayout,
     children: [
       {
+        path: '/test',
+        name: 'Test',
+        component: () => import('../views/Test')
+      },{
         path: '/',
         name: 'Dashboard',
-        component: Dashboard
+        component: () => import(/* webpackChunkName: "views-dash-board" */ '../views/Dashboard')
       },
       {
         path: 'grid-system',
         name: 'GridSystem',
-        component: GridSystem
+        component: () => import(/* webpackChunkName: "views-grid-system" */ '../views/GridSystem')
       },
       {
         path: '/grid-list-page',
         name: 'GridListPage',
-        component: GridListPage
+        component: () => import(/* webpackChunkName: "views-grid-list-page" */ '../views/GridListPage')
       },
       {
         path: '/breakpoints',
         name: 'Breakpoints',
-        component: Breakpoints
+        component: () => import(/* webpackChunkName: "views-breakpoints" */ '../views/Breakpoints')
       },
       {
         path: '/typography',
         name: 'Typography',
-        component: Typography
+        component: () => import(/* webpackChunkName: "views-typography" */ '../views/Typography')
       },
       {
         path: '/tables',
         name: 'Tables',
-        component: Tables
+        component: () => import(/* webpackChunkName: "views-tables" */ '../views/Tables')
       },
       {
         path: '/forms',
         name: 'Forms',
-        component: Forms
+        component: () => import(/* webpackChunkName: "views-forms" */ '../views/Forms')
       },
       {
         path: '/icons',
         name: 'Icons',
-        component: Icons
+        component: () => import(/* webpackChunkName: "views-icons" */ '../views/Icons')
       },
       {
         path: '/buttons',
         name: 'Buttons',
-        component: Buttons
+        component: () => import(/* webpackChunkName: "views-buttons" */ '../views/Buttons')
       }
     ],
   },
@@ -77,12 +69,12 @@ const routes = [
       {
         path: 'sign-in',
         name: 'SignIn',
-        component: SignIn
+        component: () => import(/* webpackChunkName: "views-authentication-sign-in" */ '../views/authentication/SignIn')
       },
       {
         path: 'sign-up',
         name: 'SignUp',
-        component: SignUp
+        component: () => import(/* webpackChunkName: "views-authentication-sign-up" */ '../views/authentication/SignUp')
       },
     ]
   },
@@ -93,7 +85,7 @@ const routes = [
       {
         path: 'product-list',
         name: 'ProductList',
-        component: ProductList
+        component: () => import(/* webpackChunkName: "views-page-product-list" */ '../views/page/ProductList')
       },
     ]
   },

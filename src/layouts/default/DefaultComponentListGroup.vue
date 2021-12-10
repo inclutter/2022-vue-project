@@ -24,11 +24,14 @@
 </template>
 
 <script>
-import DefaultComponentListGroup from './DefaultComponentListGroup'
-import DefaultComponentListItem from "./DefaultComponentListItem";
 export default {
   name: "DefaultComponentListGroup",
-  components: {DefaultComponentListItem},
+  components: {
+    DefaultComponentListItem: () => import(
+      /* webpackChunkName: "default-component-list-group" */
+      './DefaultComponentListGroup'
+    )
+  },
   props: {
     item: {
       type: Object,

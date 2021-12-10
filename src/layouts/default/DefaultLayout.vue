@@ -7,15 +7,21 @@
 </template>
 
 <script>
-import DefaultDrawer from "./DefaultDrawer";
-import DefaultAppBar from "./DefaultAppBar";
-import DefaultView from "./DefaultView";
 export default {
   name: "DefaultLayout",
   components: {
-    DefaultView,
-    DefaultDrawer,
-    DefaultAppBar,
+    DefaultView: () => import(
+      /* webpackChunkName: "default-view" */
+      './DefaultView'
+    ),
+    DefaultDrawer: () => import(
+      /* webpackChunkName: "default-drawer" */
+      './DefaultDrawer'
+    ),
+    DefaultAppBar: () => import(
+      /* webpackChunkName: "default-app-bar" */
+      './DefaultAppBar'
+    ),
   },
   data: () => ({
     drawer: false,
