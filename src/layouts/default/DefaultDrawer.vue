@@ -52,7 +52,7 @@ export default {
       { url: 'http://inclutter.com:8081', icon: 'mdi-face-man-outline', title: 'Jenkins'},
       { url: 'https://www.notion.so/inclutter', icon: 'mdi-view-dashboard', title: 'Notion'},
       { url: 'https://github.com/inclutter', icon: 'mdi-github', title: 'Github'},
-      { url: 'https://inclutter.atlassian.net/jira', icon: 'mdi-github', title: 'JIRA'},
+      { url: 'https://inclutter.atlassian.net/jira', icon: 'mdi-xml', title: 'JIRA'},
     ],
     right: null,
   })
