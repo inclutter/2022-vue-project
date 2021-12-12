@@ -29,7 +29,7 @@ export default {
   components: {
     DefaultComponentListItem: () => import(
       /* webpackChunkName: "default-component-list-group" */
-      './DefaultComponentListGroup'
+      './DefaultComponentListItem'
     )
   },
   props: {
