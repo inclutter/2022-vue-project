@@ -53,6 +53,9 @@ export default {
       ]},
       { title: 'Buttons', icon: 'mdi-gesture-tap-button', to: '/buttons'},
       { title: 'Icons', icon: 'mdi-robot-confused', to: '/icons'},
+      { title: 'Vue Study', icon: 'mdi-vuejs', items: [
+        { title: 'Vue Chapter1', to: '/vue-study/vue-chapter1'},
+      ]},
     ],
     sites: [
       { url: 'http://inclutter.com:8081', icon: 'mdi-face-man-outline', title: 'Jenkins'},

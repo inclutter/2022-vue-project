@@ -69,7 +69,12 @@ const routes = [
         path: '/buttons',
         name: 'Buttons',
         component: () => import(/* webpackChunkName: "views-buttons" */ '../views/Buttons')
-      }
+      },
+      {
+        path: '/vue-study/vue-chapter1',
+        name: 'VueChapter1 ',
+        component: () => import(/* webpackChunkName: "vue-study-chapter1" */ '../vue-study/VueChapter1')
+      },
     ],
   },
   {
