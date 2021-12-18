@@ -34,6 +34,10 @@ export default {
       type: String,
       default: null
     }
+  },
+  created() {
+    console.log('this.$attrs: ', this.$attrs)
+    console.log('this.$listeners: ', this.$listeners)
   }
 }
 </script>

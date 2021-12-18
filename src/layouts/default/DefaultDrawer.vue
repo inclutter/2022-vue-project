@@ -43,7 +43,10 @@ export default {
       { title: 'Grid List Page', icon: 'mdi-grid-large', to: '/grid-list-page'},
       { title: 'Breakpoints', icon: 'mdi-format-bold', to: '/breakpoints'},
       { title: 'Typography', icon: 'mdi-format-text-variant-outline', to: '/typography'},
-      { title: 'Tables', icon: 'mdi-table-large-plus', to: '/tables'},
+      { title: 'Tables', icon: 'mdi-table-large-plus', items: [
+        { title: 'Basic Table', to: '/tables/basic-table'},
+        { title: 'App Table', to: '/tables/app-table'},
+      ]},
       { title: 'Forms', icon: 'mdi-form-textbox', items: [
         { title: 'Validaion Form', to: '/forms/validation-form'},
         { title: 'App Form', to: '/forms/app-form'},
