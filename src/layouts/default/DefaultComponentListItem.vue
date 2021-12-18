@@ -3,7 +3,7 @@
     :key="item.title"
     link
     :to="item.to"
-    active-class="primary"
+    active-class="primary white--text"
     class="py-1"
   >
     <v-list-item-icon>

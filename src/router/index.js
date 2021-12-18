@@ -46,9 +46,14 @@ const routes = [
         component: () => import(/* webpackChunkName: "views-tables" */ '../views/Tables')
       },
       {
-        path: '/forms',
-        name: 'Forms',
-        component: () => import(/* webpackChunkName: "views-forms" */ '../views/Forms')
+        path: '/forms/validation-form',
+        name: 'ValidationForm',
+        component: () => import(/* webpackChunkName: "views-forms" */ '../views/form/ValidationForms')
+      },
+      {
+        path: '/forms/app-form',
+        name: 'AppForm ',
+        component: () => import(/* webpackChunkName: "views-forms" */ '../views/form/AppForms')
       },
       {
         path: '/icons',

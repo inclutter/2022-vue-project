@@ -44,7 +44,10 @@ export default {
       { title: 'Breakpoints', icon: 'mdi-format-bold', to: '/breakpoints'},
       { title: 'Typography', icon: 'mdi-format-text-variant-outline', to: '/typography'},
       { title: 'Tables', icon: 'mdi-table-large-plus', to: '/tables'},
-      { title: 'Forms', icon: 'mdi-form-textbox', to: '/forms'},
+      { title: 'Forms', icon: 'mdi-form-textbox', items: [
+        { title: 'Validaion Form', to: '/forms/validation-form'},
+        { title: 'App Form', to: '/forms/app-form'},
+      ]},
       { title: 'Buttons', icon: 'mdi-gesture-tap-button', to: '/buttons'},
       { title: 'Icons', icon: 'mdi-robot-confused', to: '/icons'},
     ],

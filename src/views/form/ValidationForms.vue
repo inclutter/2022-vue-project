@@ -101,8 +101,8 @@
 <script>
 export default {
   name: "Forms",
-
   data: () => ({
+    customValue: null,
     phoneNumber: null,
     name: null,
     email: null,
