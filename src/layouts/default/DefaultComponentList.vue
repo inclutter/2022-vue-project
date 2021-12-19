@@ -22,18 +22,11 @@
 </template>
 
 <script>
+import DefaultComponentListItem from "./DefaultComponentListItem";
+import DefaultComponentListGroup from "./DefaultComponentListGroup";
 export default {
   name: "DefaultComponentList",
-  components: {
-    DefaultComponentListGroup: () => import(
-      /* webpackChunkName: "default-component-list-group" */
-      './DefaultComponentListGroup'
-    ),
-    DefaultComponentListItem: () => import(
-      /* webpackChunkName: "default-component-list-item" */
-      './DefaultComponentListItem'
-    )
-  },
+  components: {DefaultComponentListItem, DefaultComponentListGroup},
   props: {
     items: {
       type: Array,

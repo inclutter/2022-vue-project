@@ -4,7 +4,7 @@
     color="primary"
     dark
   >
-    <v-app-bar-nav-icon @click="$emit('drawer')" />
+    <v-app-bar-nav-icon @click="drawer = !drawer" />
     <v-toolbar-title>{{ $route.name }}</v-toolbar-title>
     <v-spacer />
   </v-app-bar>
@@ -12,7 +12,17 @@
 
 <script>
 export default {
-  name: "DefaultAppBar"
+  name: "DefaultAppBar",
+  computed: {
+    drawer: {
+      get () {
+        return this.$store.getters['app/getDrawer']
+      },
+      set (value) {
+        return this.$store.dispatch('app/toggleDrawer', value)
+      }
+    }
+  }
 }
 </script>
 
