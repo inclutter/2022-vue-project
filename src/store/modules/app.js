@@ -29,7 +29,8 @@ const state = {
     ]},
   ],
   sites: [
-    { url: 'http://inclutter.com:8081', icon: 'mdi-face-man-outline', title: 'Jenkins'},
+    { url: 'http://ci.inclutter.com', icon: 'mdi-face-man-outline', title: 'Jenkins'},
+    { url: 'http://iptime.inclutter.com', icon: 'mdi-face-man-outline', title: 'iptime'},
     { url: 'https://www.notion.so/inclutter', icon: 'mdi-view-dashboard', title: 'Notion'},
     { url: 'https://github.com/inclutter', icon: 'mdi-github', title: 'Github'},
     { url: 'https://inclutter.atlassian.net/jira', icon: 'mdi-xml', title: 'JIRA'},
