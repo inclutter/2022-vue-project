@@ -30,7 +30,8 @@ const state = {
   ],
   sites: [
     { url: 'http://ci.inclutter.com', icon: 'mdi-face-man-outline', title: 'Jenkins'},
-    { url: 'http://iptime.inclutter.com', icon: 'mdi-face-man-outline', title: 'iptime'},
+    { url: 'http://iptime.inclutter.com', icon: 'mdi-search-web', title: 'iptime'},
+    { url: 'http://subapi.inclutter.com/docs/index.html', icon: 'mdi-api', title: 'api-docs'},
     { url: 'https://www.notion.so/inclutter', icon: 'mdi-view-dashboard', title: 'Notion'},
     { url: 'https://github.com/inclutter', icon: 'mdi-github', title: 'Github'},
     { url: 'https://inclutter.atlassian.net/jira', icon: 'mdi-xml', title: 'JIRA'},
